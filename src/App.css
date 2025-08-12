@@ -1,42 +1,102 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  font-size: 3rem;
+  display: block;
+  text-shadow: rgb(12, 43, 58) 5px 9px;
+  text-decoration: underline;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.news-header {
+  position: top;
+  background-color: #0b3738;
+  width: 100vw;
+  color: #33b4bd;
+  font-style: italic;
+}
+
+.nav-bar {
+  background-color: #215e5f;
+  height: 2.5rem;
+  align-content: center;
+  border-top: 2px solid rgb(207, 179, 0);
+  margin-bottom: 2rem;
+}
+
+.article-section {
+  margin: auto;
+  max-width: 85%;
+  border-style: solid;
+  border-color: rgb(207, 179, 0);
+  text-align: center;
+  padding: 1rem;
+  background-color: #051b1d;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .articles-grid {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.article-card {
+  border-style: solid;
+  font-size: small;
+  border-color: rgb(207, 179, 0);
+  background-color:#072426;
+  margin-inline: auto;
 }
 
-.card {
-  padding: 2em;
+#list-img {
+  width: 60%;
 }
 
-.read-the-docs {
-  color: #888;
+#article-body {
+  margin: auto;
+  max-width: 60%;
+  border-style: solid;
+  border-color: rgb(207, 179, 0);
+  text-align: left;
+  padding: 1rem;
+  font-size: large;
+}
+
+#article-img {
+  padding-bottom: 1rem;
+  margin: auto;
+  max-width: 60%;
+  min-width: 60%;
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 0.75rem 0 0.75rem;
+}
+
+.article-id {
+  font-size: larger;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.article-date {
+  color: #847521;
+  font-size: 0.95em;
+}
+
+#article-title {
+  font-size: larger;
+  font-weight: bold;
+  color: #e4c40f;
 }
