@@ -4,13 +4,11 @@ import { useParams } from "react-router-dom";
 export function SingleArticle() {
     const [article, setArticle] = useState(null);
     const { article_id } = useParams();
-    console.log(article, '< Article')
 
     useEffect(() => {
         async function fetchArticle(){
             const res = await fetch(`https://northcoders-news-database.onrender.com/api/articles/${article_id}`);
             const { article } = await res.json();
-            console.log(article, '<<<< Article')
             setArticle(article);
         };
         fetchArticle();
