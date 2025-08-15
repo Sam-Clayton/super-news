@@ -12,7 +12,7 @@ h1 {
 .news-header {
   position: top;
   background-color: #0b3738;
-  width: 100vw;
+  width: 100%;
   color: #33b4bd;
   font-style: italic;
 }
@@ -21,24 +21,25 @@ h1 {
   background-color: #215e5f;
   height: 2.5rem;
   align-content: center;
-  border-top: 2px solid rgb(207, 179, 0);
+  border-top: 2px solid  #af9503;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .article-section {
   margin: auto;
-  max-width: 85%;
+  max-width: 80%;
   border-style: solid;
-  border-color: rgb(207, 179, 0);
+  border-color: #af9503;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 3rem;
   background-color: #051b1d;
 }
 
 .articles-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
 }
 
@@ -49,32 +50,31 @@ h1 {
 }
 
 .article-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;  
   border-style: solid;
   font-size: small;
-  border-color: rgb(207, 179, 0);
+  border-color:  #af9503;
+  border-radius: 15px;
   background-color:#072426;
   margin-inline: auto;
+  padding: 0 1rem 1rem 1rem;
+  transition: 0.4s ease-in-out;
+  width: 85%
+}
+
+.article-card:hover {
+  background-color: #1b4d4e;
+  transform: scale(1.05);
+  
 }
 
 #list-img {
-  width: 60%;
-}
-
-#article-body {
-  margin: auto;
-  max-width: 60%;
-  border-style: solid;
-  border-color: rgb(207, 179, 0);
-  text-align: left;
-  padding: 1rem;
-  font-size: large;
-}
-
-#article-img {
-  padding-bottom: 1rem;
-  margin: auto;
-  max-width: 60%;
-  min-width: 60%;
+  width: 55%;
+  border: solid #08282b 5px;
+  border-radius: 10px;
 }
 
 .card-top-row {
@@ -82,21 +82,160 @@ h1 {
   justify-content: space-between;
   align-items: flex-start;
   padding: 0.5rem 0.75rem 0 0.75rem;
+  width: 100%;
 }
 
 .article-id {
   font-size: larger;
   font-weight: bold;
-  color: #ffd700;
+  color:  #af9503;
 }
 
 .article-date {
-  color: #847521;
+  color:  #af9503;
   font-size: 0.95em;
 }
 
 #article-title {
+  font-size:x-large;
+  font-weight: bold;
+  color:  #c7a903;
+  margin-top: 1rem;
+}
+
+#article-body {
+  margin: auto;
+  max-width: 75%;
+  border-style:double;
+  border-color:  #af9503;
+  border-width: 9px;
+  text-align: left;
+  padding: 1rem;
+  font-size: larger;
+  font-weight: 500;
+}
+
+#article-img {
+  margin: auto;
+  max-width: 80%;
+  min-width: 60%;
+  border: solid #08282b 15px;
+  border-radius: 10px;
+}
+
+.comment-card {
+  margin: auto;
+  margin-bottom: 1rem;
+  max-width: 60%;
+  border-style: solid;
+  border-color: rgb(14, 65, 54);
+  text-align: left;
+  padding: 1rem;
+  font-size: large;
+}
+
+ul {
+  list-style: none;
+}
+
+.article-page {
+  margin: auto;
+  max-width: 80%;
+  border-style: solid;
+  border-color:  #af9503;
+  text-align: center;
+  padding: 1.5rem 3rem;
+  background-color: #051b1d;
+}
+
+.comment-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 0.75rem 0.5rem 0rem;
+  width: 100%;
+}
+
+.comment-author {
   font-size: larger;
   font-weight: bold;
-  color: #e4c40f;
+  color: #af9503;
+}
+
+.comment-created {
+  color:  #af9503;
+  font-size: 0.95em;
+}
+
+button {
+  color: #fff;
+  padding: 3px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.1s, transform 0.1s;
+  width: 100%;
+  min-width: 50px;
+  max-width: 120px;
+  height: 30px;
+  font-size: medium;
+}
+
+#upvote {
+  background-color: transparent; 
+  color:#215e5f; 
+  border: 2px solid #215e5f;
+  box-shadow: 5px 6px #0000006e;
+  transition: 0.4s ease-in-out;
+}
+
+#downvote {
+  background-color: transparent; 
+  color: #215e5f; 
+  border: 2px solid #215e5f;
+  box-shadow: 5px 6px #0000006e;
+  transition: 0.4s ease-in-out;
+}
+
+#upvote:hover {
+  border-style: solid;
+  border-color: transparent;
+  background-color: #0c8f43;
+  color: aliceblue;
+}
+
+#downvote:hover {
+  border-style: solid;
+  border-color: transparent;
+  background-color:#d40b0b91;
+  color:aliceblue ;
+}
+
+#upvote:active {
+  transition: 0s;
+  background-color: #04AA6D;
+  box-shadow: 0 1px #034725;
+  transform: translateY(5px);
+}
+
+#downvote:active {
+  transition: 0s;
+  background-color: #a31919;
+  box-shadow: 0 1px #700d0d;
+  transform: translateY(5px);
+}
+
+#upvote #arrow polygon {
+  transition: 0.25s;
+}
+
+#upvote:hover #arrow polygon {
+  fill: aliceblue;
+}
+
+#downvote #arrow polygon {
+  transition: 0.25s;
+}
+
+#downvote:hover #arrow polygon {
+  fill: aliceblue;
 }
